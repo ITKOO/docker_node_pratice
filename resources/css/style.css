@@ -1,0 +1,46 @@
+
+body{
+  background-color: #565655;
+  padding: 25px 20px;
+
+}
+.input_box {
+  border: 2px solid #ffeb3a;
+  height: 30px;
+  width: 250px;
+  margin-right: 5px;
+  background-color: #565655;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  color: #ffffff;
+}
+
+.input_box:focus{
+  outline: none;
+}
+
+.add_btn{
+  background-color: #ffeb3b;
+  width: 70px;
+  height: 32px;
+  border: none;
+  border-radius: 3px;
+  color: #000000;
+  font-size: 12pt;
+}
+
+.list{
+  margin: 5px 0;
+  text-indent: 3px;
+  padding: 13px 15px;
+  background-color: #ffeb3b;
+  display: inline-block;
+  border-radius: 30px;
+}
+
+.heart_txt{
+  color: #c3c3c3;
+  margin: 10px;
+  font-size: 10pt;
+}

@@ -1,0 +1,21 @@
+html
+    head
+        meta(charset="utf-8")
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        title= title
+        style
+            include ../resources/css/style.css
+    body
+        form(action="add_list", method="post")
+            div
+                input(type="text", name="content", class="input_box")
+                input(type="submit", value="입력", class="add_btn")
+        div(class="heart_txt") 
+            span ❤️
+            span= listLength 
+        div
+            each val in lists 
+                        p(class="list")= val 
+                        br
+        br
+        p(class="heart_txt")= description
