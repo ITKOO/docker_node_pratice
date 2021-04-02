@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
         })
     }).catch(err => {
         console.error(err);
-        res.status(404).send("에러가 발생하였습니다.");
+        res.status(404).send("index 에러가 발생하였습니다.");
     })
 })
 
@@ -46,7 +46,7 @@ app.post('/add_list', (req, res) => {
         res.redirect('/');
     }).catch(err => {
         console.error(err);
-        res.status(404).send("에러가 발생하였습니다.");
+        res.status(404).send("add_list 에러가 발생하였습니다.");
     })
 })
 
