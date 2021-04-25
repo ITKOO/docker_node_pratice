@@ -1,20 +1,15 @@
 version: '3'
 services:
   database:
-    # Dockerfile이 있는 위치
     build: ./database
-    # 내부 개방 포트 : 외부 접근 포트
     ports:
       - "3306:3306"
-    restart: always
     platform: linux/x86_64
   backend:
     build: ./
-    # 연결할 외부 디렉토리 : 컨테이너 내 디렉토리
     volumes:
-      - ./:/Users/itkoo/dev/koo/test-docker-nodejs
+      - ./:/app
     ports:
       - "3000:3000"
-    # 환경변수 설정
     environment: 
       - DBHOST=database
