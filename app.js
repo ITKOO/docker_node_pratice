@@ -51,5 +51,5 @@ app.post('/add_list', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log('connected http://localhost:${port}')
+    console.log(`connected http://localhost:${port}`)
 })
