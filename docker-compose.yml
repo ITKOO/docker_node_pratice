@@ -5,10 +5,13 @@ services:
     ports:
       - "3306:3306"
     platform: linux/x86_64
+    command: 
+    - --character-set-server=utf8mb4
+    - --collation-server=utf8mb4_unicode_ci
   backend:
     build: ./
-    volumes:
-      - ./:/app
+    #volumes:
+    #- ./:/app
     ports:
       - "3000:3000"
     environment: 
