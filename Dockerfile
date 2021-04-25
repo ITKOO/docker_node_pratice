@@ -1,5 +1,10 @@
 FROM node:12.18.4
 
+# dockerize 설치
+ENV DOCKERIZE_VERSION v0.6.1
+RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \  
+    && tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
+
 # app 폴더 생성
 RUN mkdir -p /app
 
@@ -15,4 +20,5 @@ RUN npm install
 ENV NODE_ENV=development
 
 # 실행
-CMD ["node", "app.js"]
+RUN chmod +x docker-entrypoint.sh  
+ENTRYPOINT ./docker-entrypoint.sh
