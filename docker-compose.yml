@@ -3,9 +3,11 @@ services:
   database:
     # Dockerfile이 있는 위치
     build: ./database
-    # 내부에서 개방할 포트 : 외부에서 접근할 포트
+    # 내부 개방 포트 : 외부 접근 포트
     ports:
       - "3306:3306"
+    restart: always
+    platform: linux/x86_64
   backend:
     build: ./
     # 연결할 외부 디렉토리 : 컨테이너 내 디렉토리
