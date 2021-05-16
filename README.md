@@ -1,5 +1,9 @@
 # docker_node_pratice
 
+<b>✔️ 실행방법 정리글</b>
+* https://www.notion.so/Aegis-378016ecd0014b89b86ab5bd012d120d
+
+
 ### 1) Docker를 사용한 실행방법
 
 아래 명령어를 입력한 후 실행완료 시 http://localhost:3000/ 에 접속합니다.
